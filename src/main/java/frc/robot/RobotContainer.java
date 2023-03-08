@@ -69,8 +69,7 @@ public class RobotContainer {
   private final Joystick driverRight;
   private final JoystickButton autoBalanceButtonRight;
   private final JoystickButton autoBalanceButtonLeft;
-  private final JoystickButton autoBalanceTestButtonRight;
-  private final JoystickButton autoBalanceTestButtonLeft;
+
    
 
   private SendableChooser<Command> autoChooser;
@@ -94,8 +93,7 @@ public class RobotContainer {
   driverRight = new Joystick(OperatorConstants.DRIVER_RIGHT_PORT);
   autoBalanceButtonLeft = new JoystickButton(driverLeft, 1);
   autoBalanceButtonRight = new JoystickButton(driverRight, 1);
-  autoBalanceTestButtonLeft = new JoystickButton(driverLeft, 3);
-  autoBalanceTestButtonRight = new JoystickButton(driverRight, 3);
+  
 
     /** Drivesystem instantiations */
     driveSystem = new DriveSystem();
@@ -165,8 +163,8 @@ public class RobotContainer {
 
     SmartDashboard.putData(CommandScheduler.getInstance());
     
-    autoBalanceTestButtonLeft.whileTrue(driveSystem.autoBalance());
-    autoBalanceTestButtonRight.whileTrue(driveSystem.autoBalance());
+    autoBalanceButtonLeft.whileTrue(driveSystem.autoBalance());
+    autoBalanceButtonRight.whileTrue(driveSystem.autoBalance());
 
   }
 

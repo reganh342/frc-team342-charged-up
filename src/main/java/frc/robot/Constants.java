@@ -98,7 +98,7 @@ public final class Constants {
   }
 
   public static class LiftConstants {
-    public static final double MAX_SPEED = 0.30;
+    public static final double MAX_SPEED = 0.50;
     public static final double TOLERANCE = 0.01;
 
     public static final double MAX_POSITION = 0.2;
